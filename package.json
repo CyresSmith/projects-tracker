@@ -1,5 +1,6 @@
 {
   "name": "projects-tracker",
+  "homepage": "https://CyresSmith.github.io/projects-tracker/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,12 +8,23 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "normalize.css": "^8.0.1",
+    "notiflix": "^3.2.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "vite-jsconfig-paths": "^2.0.1"
+    "react-icons": "^4.10.1",
+    "react-redux": "^8.1.1",
+    "react-router-dom": "^6.14.1",
+    "react-scripts": "^5.0.1",
+    "react-spinners": "^0.13.8",
+    "redux-persist": "^6.0.0",
+    "vite-jsconfig-paths": "^2.0.1",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.14",
