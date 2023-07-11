@@ -1,4 +1,4 @@
-import Feature from './Feature/Feature';
+import Feature from '../../shared/Feature/Feature';
 import { LeftSideBox, LeftSideContainer, Title } from './LeftSide.styled';
 import Logo from 'components/shared/Logo/Logo';
 

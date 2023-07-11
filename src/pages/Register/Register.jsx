@@ -1,7 +1,13 @@
-import React from 'react';
+import Hero from 'components/Register/Hero';
+import FormSection from 'components/Register/FormSection';
 
 const Register = () => {
-  return <div>Register Page</div>;
+  return (
+    <>
+      <Hero />
+      <FormSection />
+    </>
+  );
 };
 
 export default Register;

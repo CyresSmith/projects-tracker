@@ -1,8 +1,8 @@
 import { Btn } from './Button.styled';
 
-const Button = ({ type = 'button', onClick, children }) => {
+const Button = ({ type = 'button', onClick, children, white = false }) => {
   return (
-    <Btn type={type} onClick={onClick}>
+    <Btn white={white} type={type} onClick={onClick}>
       {children}
     </Btn>
   );

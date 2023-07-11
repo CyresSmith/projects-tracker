@@ -2,14 +2,14 @@ import styled from '@emotion/styled';
 import { Field } from 'formik';
 import theme from 'theme';
 
-export const InputBox = styled.div`
+export const InputBox = styled.p`
   width: 100%;
   position: relative;
 `;
 
 export const Label = styled.label`
   color: ${theme.colors.black};
-  font-size: ${theme.fontSizes.m};
+  font-size: ${theme.fontSizes.l};
   font-weight: ${theme.fontWeights.regular};
   line-height: ${theme.lineHeights.m};
   position: absolute;

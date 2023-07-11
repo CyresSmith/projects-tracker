@@ -8,6 +8,7 @@ const Feature = ({
   right = 0,
   bottom = 0,
   transform = 0,
+  small = false,
 }) => {
   return (
     <FeatureBox
@@ -15,9 +16,12 @@ const Feature = ({
       right={right}
       bottom={bottom}
       transform={transform}
+      small={small}
     >
-      <Icon src={icon} />
-      <FeatureText textColor={textColor}>{children}</FeatureText>
+      <Icon src={icon} small={small} />
+      <FeatureText textColor={textColor} small={small}>
+        {children}
+      </FeatureText>
     </FeatureBox>
   );
 };
