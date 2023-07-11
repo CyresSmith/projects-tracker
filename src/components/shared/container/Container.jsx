@@ -1,7 +1,7 @@
-import React from 'react';
+import { ContainerBox } from './Conteiner.styled';
 
-const Container = () => {
-  return <div></div>;
+const Container = ({ children }) => {
+  return <ContainerBox>{children}</ContainerBox>;
 };
 
 export default Container;

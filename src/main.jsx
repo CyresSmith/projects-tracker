@@ -1,11 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
 import './index.css';
-import App from './App.jsx';
 import theme from 'theme';
+
+import App from './App.jsx';
+import Providers from 'Providers';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <Providers>
+      <App />
+    </Providers>
   </React.StrictMode>
 );
