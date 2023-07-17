@@ -1,12 +1,27 @@
 import Container from 'components/shared/Container';
-import { Section } from './FormSection.styled';
-import RegisterForm from './RegisterForm/RegisterForm';
+import { HideForm, Section } from './FormSection.styled';
+import FirstStepForm from './RegisterForm/FirstStepForm';
+import SecondStepForm from './SecondStepForm/SecondStepForm';
+import { useState } from 'react';
 
-const FormSection = () => {
+const FormSection = ({ step, setStep }) => {
+  const [firstStepData, setFirstStepData] = useState({});
+
   return (
-    <Section>
+    <Section formActive={step}>
+      {!step && <HideForm />}
       <Container>
-        <RegisterForm />
+        <>
+          {step !== 2 && (
+            <FirstStepForm
+              setStep={setStep}
+              setFirstStepData={setFirstStepData}
+            />
+          )}
+          {step === 2 && (
+            <SecondStepForm setStep={setStep} firstStepData={firstStepData} />
+          )}
+        </>
       </Container>
     </Section>
   );

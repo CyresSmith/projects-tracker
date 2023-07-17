@@ -45,8 +45,18 @@ const LoginForm = () => {
     >
       <FormBox>
         <div>
-          <Input type="email" label="Email" placeholder="example@email.com" />
-          <Input type="password" label="Password" placeholder="********" />
+          <Input
+            type="email"
+            id="email"
+            label="Your email"
+            placeholder="example@email.com"
+          />
+          <Input
+            type="password"
+            id="password"
+            label="Password"
+            placeholder="********"
+          />
         </div>
 
         <div style={{ marginTop: theme.space[3], marginBottom: '32px' }}>
