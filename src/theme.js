@@ -6,6 +6,7 @@ const theme = {
     background: '#FAFAFA',
     primary: {
       regular: '#215DF6',
+      hover: '#5280F3',
       light: '#DCE6FF',
       bg: '#F1F8FF',
     },
