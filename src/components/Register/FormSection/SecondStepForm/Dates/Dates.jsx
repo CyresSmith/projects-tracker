@@ -4,6 +4,7 @@ import { Label } from 'components/shared/Input/Input.styled';
 import CalendarIcon from 'components/shared/Icons/CalendarIcon/CalendarIcon';
 import DatePicker from './DatePicker/DatePicker';
 import { useState } from 'react';
+import IconButton from 'components/shared/button/IconButton/IconButton';
 
 const Dates = ({ setFieldValue, values }) => {
   const [dateStartOpen, setDateStartOpen] = useState(false);
@@ -19,12 +20,14 @@ const Dates = ({ setFieldValue, values }) => {
           placeholder="Start"
           id="dateStart"
           value={values.dateStart}
-          // onClick={() => setDateStartOpen(prev => !prev)}
         />
 
-        <CalendarIcon
-          id="dateStart"
+        <IconButton
+          id="calendar"
+          icon={CalendarIcon}
+          iconSize={24}
           onClick={() => setDateStartOpen(prev => !prev)}
+          round
         />
 
         {dateStartOpen && (
@@ -42,14 +45,16 @@ const Dates = ({ setFieldValue, values }) => {
           placeholder="Deadline"
           id="deadline"
           value={new Date(values.dateStart).toLocaleDateString()}
-          // onClick={() => setDeadlineOpen(prev => !prev)}
         />
 
-        <CalendarIcon
-          id="deadline"
+        <IconButton
+          id="calendar"
+          icon={CalendarIcon}
+          iconSize={24}
           onClick={() => {
             setDeadlineOpen(prev => !prev);
           }}
+          round
         />
 
         {deadlineOpen && (

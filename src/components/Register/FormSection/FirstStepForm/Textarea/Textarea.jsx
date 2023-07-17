@@ -1,6 +1,6 @@
 import { ErrorMessage } from 'formik';
-import { TextareaBox, TextareaField, SubLabel } from './Textarea.styled';
-import { Label, Error } from 'components/shared/Input/Input.styled';
+import { TextareaBox, TextareaField } from './Textarea.styled';
+import { Label, SubLabel, Error } from 'components/shared/Input/Input.styled';
 
 const Textarea = ({ id, type, label, subLabel, placeholder }) => {
   return (

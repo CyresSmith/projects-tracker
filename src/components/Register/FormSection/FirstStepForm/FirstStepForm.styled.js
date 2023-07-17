@@ -58,7 +58,7 @@ export const FormBox = styled(Form)`
     margin-top: 172px;
   }
 
-  button {
+  button[id='next'] {
     margin-top: ${theme.space[4]};
   }
 `;

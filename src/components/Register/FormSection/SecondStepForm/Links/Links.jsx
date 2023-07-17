@@ -1,13 +1,10 @@
-import { useState } from 'react';
-import { Field, Formik, FieldArray, ErrorMessage } from 'formik';
-import { MdClose } from 'react-icons/md';
+import { BsFillTrash3Fill } from 'react-icons/bs';
 
 import Input from 'components/shared/Input';
 import { LinksBox, LinksForm, LinksList, Link } from './Links.styled';
 import Button from 'components/shared/button/Button';
-import IconButton from 'components/shared/button/IconButton/IconButton';
-import { Label } from 'components/shared/Input/Input.styled';
-import { SubLabel } from '../../RegisterForm/Textarea/Textarea.styled';
+import IconButton from 'components/shared/button/IconButton';
+import { Label, SubLabel } from 'components/shared/Input/Input.styled';
 
 const Links = ({ values }) => {
   return (
@@ -22,14 +19,14 @@ const Links = ({ values }) => {
                 return (
                   <Link key={i}>
                     <Input
-                      type="text"
+                      type="url"
                       id={`links.${i}`}
                       placeholder="https://"
                     />
 
                     {values.links.length > 1 && (
                       <IconButton
-                        icon={MdClose}
+                        icon={BsFillTrash3Fill}
                         iconSize={24}
                         type="button"
                         onClick={() => remove(i)}

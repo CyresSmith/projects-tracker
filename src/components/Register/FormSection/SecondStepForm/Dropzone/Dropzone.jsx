@@ -9,8 +9,7 @@ import {
   Box,
   ThumbBox,
 } from './Dropzone.styled';
-import { Label } from 'components/shared/Input/Input.styled';
-import { SubLabel } from '../../RegisterForm/Textarea/Textarea.styled';
+import { Label, SubLabel } from 'components/shared/Input/Input.styled';
 import Thumb from './Thumb';
 
 const Dropzone = ({ values, setFieldValue }) => {

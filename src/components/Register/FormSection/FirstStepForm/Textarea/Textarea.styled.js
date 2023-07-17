@@ -27,14 +27,3 @@ export const TextareaField = styled(Field)`
     line-height: ${theme.lineHeights.m};
   }
 `;
-
-export const SubLabel = styled.span`
-  font-family: ${theme.fonts.body};
-  font-size: ${theme.fontSizes.m};
-  font-weight: ${theme.fontWeights.light};
-  line-height: ${theme.lineHeights.s};
-  position: absolute;
-  bottom: calc(185px + ${theme.space[2]});
-  display: block;
-  width: 480px;
-`;

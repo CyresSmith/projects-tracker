@@ -16,6 +16,17 @@ export const Label = styled.label`
   bottom: 60px;
 `;
 
+export const SubLabel = styled.span`
+  font-family: ${theme.fonts.body};
+  font-size: ${theme.fontSizes.m};
+  font-weight: ${theme.fontWeights.light};
+  line-height: ${theme.lineHeights.s};
+  position: absolute;
+  bottom: calc(185px + ${theme.space[2]});
+  display: block;
+  width: 480px;
+`;
+
 export const InputField = styled(Field)`
   display: block;
   width: 100%;

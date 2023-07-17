@@ -14,13 +14,12 @@ export const InputBox = styled.div`
   position: relative;
   flex: 50%;
 
-  svg[id='dateStart'],
-  svg[id='deadline'] {
+  button[id='calendar'] {
     position: absolute;
-    right: ${theme.space[3]};
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
+    right: ${theme.space[1]};
+    top: ${theme.space[1]};
+    background-color: transparent;
+    color: ${theme.colors.primary.regular};
   }
 
   div[id='datePicker'] {
