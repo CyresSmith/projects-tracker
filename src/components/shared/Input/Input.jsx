@@ -1,6 +1,5 @@
 import { ErrorMessage } from 'formik';
-import { InputBox, Label, InputField, Error } from './Input.styled';
-import { SubLabel } from 'components/Register/FormSection/RegisterForm/Textarea/Textarea.styled';
+import { InputBox, Label, SubLabel, InputField, Error } from './Input.styled';
 
 const Input = ({ type, label, sublabel, placeholder, id, onClick = null }) => {
   return (

@@ -2,6 +2,7 @@ import theme from 'theme';
 import StyledButton from './IconButton.styled';
 
 const IconButton = ({
+  id = null,
   icon: Icon = null,
   iconSize,
   type = 'button',
@@ -14,6 +15,7 @@ const IconButton = ({
 }) => {
   return (
     <StyledButton
+      id={id}
       type={type}
       disabled={disabled}
       aria-labelledby={ariaLabel}

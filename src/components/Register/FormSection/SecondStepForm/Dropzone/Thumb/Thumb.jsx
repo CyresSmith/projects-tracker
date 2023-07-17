@@ -52,7 +52,7 @@ export const Thumb = ({ file, setFiles }) => {
       }
     >
       <Delete hovered={hovered}>
-        <BsFillTrash3Fill size={70} color={theme.colors.white} />
+        <BsFillTrash3Fill size={30} color={theme.colors.danger} />
       </Delete>
 
       {imagesFormats.includes(file?.type) && (

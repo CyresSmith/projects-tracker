@@ -43,6 +43,10 @@ export const Link = styled.li`
     right: ${theme.space[1]};
     top: ${theme.space[1]};
     background-color: ${theme.colors.white};
-    color: ${theme.colors.danger};
+    color: ${theme.colors.secondary.regular};
+
+    :hover {
+      color: ${theme.colors.danger};
+    }
   }
 `;

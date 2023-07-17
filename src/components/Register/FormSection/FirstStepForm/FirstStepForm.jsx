@@ -7,8 +7,11 @@ import Button from 'components/shared/button';
 import Checkbox from './Checkbox';
 import Textarea from './Textarea';
 import { Label, Error } from 'components/shared/Input/Input.styled';
+import PasswordInput from './PasswordInput/PasswordInput';
 
 const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$/;
+const phoneRegExp =
+  /^(\+?\d{1,3}\s?-?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{2}[\s.-]?\d{2}$/;
 
 const services = [
   'UI/UX Design',
@@ -22,6 +25,13 @@ const services = [
 ];
 
 const ValidationSchema = Yup.object().shape({
+  name: Yup.string()
+    .min(3, 'Must be at least 3 characters')
+    .max(20, 'Must be max 20 characters')
+    .required('Required'),
+  phone: Yup.string()
+    .matches(phoneRegExp, 'Must be phone in international format')
+    .required('Required'),
   email: Yup.string().email('Must be valid email').required('Required'),
   password: Yup.string()
     .min(8, 'Must be at least 8 characters')
@@ -30,6 +40,9 @@ const ValidationSchema = Yup.object().shape({
       passwordRegex,
       'Must be at least one capital letter and one number'
     )
+    .required('Required'),
+  confirmPassword: Yup.string()
+    .oneOf([Yup.ref('password'), null], 'Passwords must match!')
     .required('Required'),
   services: Yup.array()
     .min(1, 'Must be at least 1 option selected')
@@ -53,8 +66,11 @@ const ValidationSchema = Yup.object().shape({
 });
 
 const initialValues = {
+  name: '',
+  phone: '',
   email: '',
   password: '',
+  confirmPassword: '',
   services: [],
   desc: '',
   mission: '',
@@ -63,7 +79,7 @@ const initialValues = {
 };
 
 const FirstStepForm = ({ setStep, setFirstStepData }) => {
-  const getFormData = async data => {
+  const handleSubmit = async data => {
     setStep(2);
     setFirstStepData(data);
   };
@@ -73,23 +89,36 @@ const FirstStepForm = ({ setStep, setFirstStepData }) => {
       initialValues={initialValues}
       validationSchema={ValidationSchema}
       onSubmit={(values, { resetForm }) => {
-        getFormData(values);
+        const { confirmPassword, ...data } = values;
+
+        handleSubmit(data);
         resetForm();
       }}
     >
       {({ errors, touched }) => (
         <FormBox>
           <div id="email&password">
+            <Input type="text" id="name" label="Name" placeholder="Name" />
+            <Input
+              type="tel"
+              id="phone"
+              label="Phone"
+              placeholder="+3801234567"
+            />
             <Input
               type="email"
               id="email"
-              label="Your email"
+              label="Email"
               placeholder="example@email.com"
             />
-            <Input
-              type="password"
+            <PasswordInput
               id="password"
               label="Password"
+              placeholder="********"
+            />
+            <PasswordInput
+              id="confirmPassword"
+              label="Confirm password"
               placeholder="********"
             />
           </div>
@@ -156,7 +185,9 @@ const FirstStepForm = ({ setStep, setFirstStepData }) => {
             placeholder="Start typing..."
           />
 
-          <Button type="submit">Next</Button>
+          <Button id="next" type="submit">
+            Next
+          </Button>
         </FormBox>
       )}
     </Formik>

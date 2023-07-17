@@ -1,7 +1,7 @@
 import Container from 'components/shared/Container';
 import { HideForm, Section } from './FormSection.styled';
-import FirstStepForm from './RegisterForm/FirstStepForm';
-import SecondStepForm from './SecondStepForm/SecondStepForm';
+import FirstStepForm from './FirstStepForm';
+import SecondStepForm from './SecondStepForm';
 import { useState } from 'react';
 
 const FormSection = ({ step, setStep }) => {
