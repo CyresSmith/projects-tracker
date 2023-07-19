@@ -9,6 +9,7 @@ export const ButtonBox = styled.button`
   border: none;
   color: ${p => (p.color ? p.color : theme.colors.primary.regular)};
   transition: ${theme.transition.primary};
+  padding: 0;
 
   svg {
     margin-right: ${theme.space[2]};
@@ -27,7 +28,7 @@ export const ButtonBox = styled.button`
 `;
 
 export const Text = styled.span`
-  color: ${theme.colors.black};
+  color: ${p => (p.color ? p.color : theme.colors.black)};
   font-family: ${theme.fonts.body};
   font-size: ${theme.fontSizes.s};
   font-weight: ${theme.fontWeights.regular};
