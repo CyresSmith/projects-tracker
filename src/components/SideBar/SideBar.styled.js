@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import theme from 'theme';
 
 export const SidebarBox = styled.aside`
-  /* width: 264px; */
+  width: 244px;
   height: 100vh;
   padding: ${theme.space[4]} ${theme.space[3]};
   display: flex;
@@ -13,5 +13,5 @@ export const SidebarBox = styled.aside`
 `;
 
 export const LogoLink = styled(Link)`
-  margin-bottom: 66px;
+  margin-bottom: ${theme.space[4]};
 `;

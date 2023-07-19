@@ -8,7 +8,7 @@ export const ToolLink = styled(NavLink)`
   padding: ${theme.space[2]} ${theme.space[3]};
   color: ${theme.colors.secondary.dark};
   background-color: transparent;
-  border-radius: 8px;
+  border-radius: ${theme.radii.m};
   transition: ${theme.transition.primary};
   font-size: ${theme.fontSizes.m};
   font-weight: ${theme.fontWeights.regular};

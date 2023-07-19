@@ -16,6 +16,12 @@ const theme = {
       dark: '#838A99',
       bg: '#FAFAFA',
     },
+    progress: {
+      trail: '#D2F4DD',
+      path: '#14AE5C',
+      trailInactive: '#E9EBF0',
+      pathInactive: '#7996BD',
+    },
     danger: '#D21312',
     success: '#14AE5C',
     warning: 'FF6000',

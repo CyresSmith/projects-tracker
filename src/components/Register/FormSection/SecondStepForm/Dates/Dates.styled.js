@@ -8,6 +8,18 @@ export const DatesBox = styled.div`
   position: relative;
   margin-top: 84px;
   margin-bottom: ${theme.space[4]};
+
+  .rdp-nav {
+    button {
+      transition: ${theme.transition.primary};
+    }
+  }
+
+  .rdp-cell {
+    button {
+      transition: ${theme.transition.primary};
+    }
+  }
 `;
 
 export const InputBox = styled.div`

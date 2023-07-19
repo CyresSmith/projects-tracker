@@ -10,7 +10,7 @@ export const ProjectBox = styled.span`
   position: relative;
   color: ${theme.colors.primary.regular};
   background-color: ${theme.colors.primary.light};
-  border-radius: 8px;
+  border-radius: ${theme.radii.m};
   cursor: pointer;
   margin-top: ${theme.space[2]};
 `;

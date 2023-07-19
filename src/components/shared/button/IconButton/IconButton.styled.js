@@ -9,7 +9,7 @@ const StyledButton = styled('button')`
     p.disabled ? theme.colors.secondary.light : theme.colors.secondary.dark};
   cursor: pointer;
   border: none;
-  border-radius: ${p => (p.round ? '50%' : '10px')};
+  border-radius: ${p => (p.round ? '50%' : theme.radii.m)};
   transition: ${theme.transition.primary};
   transform-origin: center;
 
