@@ -33,6 +33,8 @@ const Stage = ({ stage }) => {
     contact,
   } = stage;
 
+  const localeDate = date => new Date(date).toLocaleDateString();
+
   return (
     <StageBox>
       {isActive && <Active>Active</Active>}
@@ -42,7 +44,7 @@ const Stage = ({ stage }) => {
         <Time>
           <span>
             <CalendarIcon size={18} color={theme.colors.black} />
-            {dateStart} - {deadline}
+            {localeDate(dateStart)} - {localeDate(deadline)}
           </span>
           <span>
             <PiTimerFill size={18} color={theme.colors.black} />

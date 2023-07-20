@@ -74,8 +74,8 @@ const theme = {
   radii: {
     s: '6px',
     m: '12px',
-    l: '18px',
-    xl: '30px',
+    l: '24px',
+    xl: '36px',
     xxl: '48px',
     round: '50%',
   },
