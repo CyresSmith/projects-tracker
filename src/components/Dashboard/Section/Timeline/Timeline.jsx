@@ -1,10 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { TimelineBox, Day, DayDate } from './Timeline.styled';
+import {
+  TimelineBox,
+  Day,
+  DayDate,
+  StageBox,
+  StageInfo,
+  StageName,
+  StageDates,
+} from './Timeline.styled';
 
 const Timeline = ({ stages = [] }) => {
   const [sortedStages, setSortedStages] = useState([]);
-  const [startDate, setStartDate] = useState(null);
-  const [endDate, setEndDate] = useState(null);
   const [timelineDates, setTimelineDates] = useState([]);
 
   const [isDragging, setIsDragging] = useState(false);
@@ -34,12 +40,6 @@ const Timeline = ({ stages = [] }) => {
 
       return acc;
     }, {});
-
-    // const startDate = new Date(sortedStages[0].dateStart);
-    // setStartDate(startDate);
-
-    // const endDate = new Date(sortedStages[sortedStages.length - 1].deadline);
-    // setEndDate(endDate);
 
     const timelineDates = [];
     const currentDate = new Date(startDate);
@@ -78,6 +78,60 @@ const Timeline = ({ stages = [] }) => {
       {timelineDates.map(date => (
         <Day key={date}>
           <DayDate>{new Date(date).toLocaleDateString().slice(0, -4)}</DayDate>
+
+          {sortedStages.map((stage, i) => {
+            const today = new Date();
+            const deadline = new Date(stage.deadline);
+            const start = new Date(stage.dateStart);
+
+            const status = () => {
+              switch (true) {
+                case today > deadline:
+                  return 'completed';
+
+                case today > start && today < deadline:
+                  return 'active';
+
+                default:
+                  return 'pending';
+              }
+            };
+
+            const nameCrop = name => {
+              if (name.length > 17) {
+                return `${name.slice(0, 17)}...`;
+              }
+
+              return name;
+            };
+
+            if (date.getTime() === start.getTime()) {
+              const duration = Math.floor(
+                (deadline - start) / (1000 * 60 * 60 * 24)
+              );
+
+              return (
+                <StageBox
+                  key={stage.id}
+                  duration={duration}
+                  numberOfStages={stages.length}
+                  index={i}
+                  status={status()}
+                >
+                  <StageInfo numberOfStages={stages.length}>
+                    <StageName status={status()}>
+                      {nameCrop(stage.name)}
+                    </StageName>
+                    <StageDates>
+                      {start.toLocaleDateString()}
+                      {' - '}
+                      {deadline.toLocaleDateString()}
+                    </StageDates>
+                  </StageInfo>
+                </StageBox>
+              );
+            }
+          })}
         </Day>
       ))}
     </TimelineBox>

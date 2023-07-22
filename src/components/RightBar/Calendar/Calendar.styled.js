@@ -22,4 +22,13 @@ export const CalendarBox = styled.div`
       transition: ${theme.transition.primary};
     }
   }
+
+  .rdp-day_today {
+    color: ${theme.colors.primary.regular};
+    background-color: ${theme.colors.primary.light};
+
+    :hover {
+      background-color: ${theme.colors.primary.hover};
+    }
+  }
 `;

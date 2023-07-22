@@ -26,7 +26,6 @@ const Progress = () => {
             <Text>Ready to launch</Text>
           </Info>
         </CircularProgressbarWithChildren>
-        ;
       </Box>
     </ProgressBox>
   );

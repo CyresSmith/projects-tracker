@@ -7,7 +7,7 @@ const Event = ({ event }) => {
     <EventBox>
       <EventInfo>
         <EventName>{event.name}</EventName>
-        <EventDate>{event.date}</EventDate>
+        <EventDate>{new Date(event.date).toLocaleDateString()}</EventDate>
       </EventInfo>
     </EventBox>
   );

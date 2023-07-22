@@ -5,5 +5,5 @@ export const List = styled.ul`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: ${theme.space[4]};
+  gap: ${theme.space[3]};
 `;

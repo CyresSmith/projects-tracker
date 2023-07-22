@@ -10,6 +10,7 @@ export const SidebarBox = styled.aside`
   flex-direction: column;
   align-items: center;
   background-color: ${theme.colors.white};
+  position: fixed;
 `;
 
 export const LogoLink = styled(Link)`

@@ -8,13 +8,15 @@ import Progress from './Progress';
 
 import { RightBarBox } from './RightBar.styled';
 
+import events from 'events.json';
+
 const RightBar = () => {
   return (
     <RightBarBox>
       <Header />
-      <Calendar />
+      <Calendar events={events} />
       <TextButton icon={BsFillPlusCircleFill}>Schedule a call</TextButton>
-      <Events />
+      <Events events={events} />
       <Progress />
     </RightBarBox>
   );

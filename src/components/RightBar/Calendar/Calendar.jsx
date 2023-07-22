@@ -8,40 +8,31 @@ import '../../Register/FormSection/SecondStepForm/Dates/DatePicker/styles.css';
 import { CalendarBox } from './Calendar.styled';
 import './calendarStyles.css';
 
-const Calendar = ({ field, setFieldValue, togglePicker }) => {
+const Calendar = ({ events = [] }) => {
   const [day, setDay] = useState(null);
-
-  const today = new Date();
-
-  const isPastDate = date => {
-    return differenceInCalendarDays(date, new Date()) < 0;
-  };
-
-  const OnlyFutureRow = props => {
-    const isPastRow = props.dates.every(isPastDate);
-    if (isPastRow) <></>;
-    return <Row {...props} />;
-  };
+  const [eventsDates, setEventsDates] = useState([]);
 
   const selectHandle = value => {
     const date = format(value, 'dd.MM.yy');
     setDay(date);
-    setFieldValue(field, date);
-    togglePicker();
   };
+
+  useEffect(() => {
+    if (events.length === 0) return;
+
+    events.map(event =>
+      setEventsDates(prev => [...prev, new Date(event.date)])
+    );
+  }, [events]);
 
   return (
     <CalendarBox>
       <DayPicker
-        mode="single"
-        selected={day}
-        onSelect={selectHandle}
-        fromDate={today}
-        captionLayout="dropdown"
+        mode="multiple"
+        selected={eventsDates}
+        // onSelect={selectHandle}
         fixedWeeks
         showOutsideDays
-        hidden={isPastDate}
-        components={{ Row: OnlyFutureRow }}
         ISOWeek
       />
     </CalendarBox>
