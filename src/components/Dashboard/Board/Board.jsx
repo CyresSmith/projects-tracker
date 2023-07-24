@@ -2,7 +2,9 @@ import React from 'react';
 import { List } from './Board.styled';
 import Stage from './Stage';
 
-const Board = ({ stages = [] }) => {
+import stages from 'stages.json';
+
+const Board = () => {
   return (
     <List>
       {stages.map(stage => (

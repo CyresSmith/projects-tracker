@@ -18,7 +18,7 @@ const StyledButton = styled('button')`
   }
 
   :hover:not(:disabled) {
-    transform: scale(1.1);
+    background-color: ${theme.colors.secondary.hover};
   }
 `;
 

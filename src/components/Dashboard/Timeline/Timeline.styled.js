@@ -19,8 +19,14 @@ export const Day = styled.li`
   flex-shrink: 0;
   width: ${dayWidth};
   height: 490px;
-  border-left: 1px dashed ${theme.colors.secondary.regular};
+  border-left: 1px dashed
+    ${p =>
+      p.isRequiredDate
+        ? theme.colors.primary.regular
+        : theme.colors.secondary.regular};
   position: relative;
+  background-color: ${p =>
+    p.isRequiredDate ? theme.colors.primary.bg : 'transparent'};
 
   :last-of-type {
     width: 1px;
@@ -28,9 +34,13 @@ export const Day = styled.li`
 `;
 
 export const DayDate = styled.h4`
-  color: ${theme.colors.secondary.regular};
+  color: ${p =>
+    p.isRequiredDate
+      ? theme.colors.primary.regular
+      : theme.colors.secondary.regular};
   font-size: ${theme.fontSizes.s};
-  font-weight: ${theme.fontWeights.light};
+  font-weight: ${p =>
+    p.isRequiredDate ? theme.fontWeights.bold : theme.fontWeights.light};
   line-height: ${theme.lineHeights.m};
   position: absolute;
   bottom: calc(-21px - ${theme.space[3]});

@@ -1,13 +1,7 @@
-import Header from 'components/Dashboard/Header';
-import Section from 'components/Dashboard/Section/Section';
+import DashboardSection from 'components/Dashboard';
 
 const Dashboard = () => {
-  return (
-    <>
-      <Header />
-      <Section />
-    </>
-  );
+  return <DashboardSection />;
 };
 
 export default Dashboard;
