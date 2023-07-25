@@ -7,8 +7,9 @@ export const HeaderBox = styled.div`
   align-items: center;
   justify-content: flex-end;
   gap: ${theme.space[3]};
+  position: relative;
 
-  button {
+  button[id='bellButton'] {
     width: 52px;
     height: 52px;
     background-color: ${theme.colors.primary.light};

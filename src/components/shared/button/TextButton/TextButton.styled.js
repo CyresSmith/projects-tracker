@@ -13,7 +13,6 @@ export const ButtonBox = styled.button`
 
   svg {
     margin-right: ${theme.space[2]};
-    transition: ${theme.transition.primary};
   }
 
   :disabled {
