@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TimeLineIcon = ({ width = '24', height = '24', color = '#215DF6' }) => {
+const TimeLineIcon = ({ width = '24', height = '24', color = 'inherit' }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

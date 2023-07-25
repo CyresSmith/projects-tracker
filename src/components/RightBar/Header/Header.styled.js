@@ -19,6 +19,10 @@ export const HeaderBox = styled.div`
   }
 `;
 
+export const NotificationBtnBox = styled.div`
+  position: relative;
+`;
+
 export const UserAvatar = styled.img`
   width: 52px;
   height: 52px;

@@ -1,23 +1,68 @@
-import IconButton from 'components/shared/button/IconButton';
-import { HeaderBox, UserAvatar } from './Header.styled';
+import { useEffect, useState } from 'react';
+
 import BellIcon from 'components/shared/Icons/BellIcon';
 
+import IconButton from 'components/shared/button/IconButton';
+
+import { HeaderBox, NotificationBtnBox, UserAvatar } from './Header.styled';
+import Popup from './Popup';
+import Profile from './Profile';
+import Notifications from './Notifications';
+import Badge from 'components/shared/Badge';
+
 import user from 'user.json';
-import Profile from './Profile/Profile';
-import { useState } from 'react';
+import notifications from 'notifications.json';
 
 const Header = () => {
-  const [profileOpen, setProfileOpen] = useState(false);
+  const [popUpOpen, setPopUpOpen] = useState(null);
 
-  const handleProfileToggle = () => {
-    setProfileOpen(prev => !prev);
+  const handlePopupToggle = e => {
+    setPopUpOpen(prev => {
+      switch (true) {
+        case !prev:
+          return e.currentTarget.id;
+
+        case prev !== null && prev !== e.currentTarget.id:
+          return e.currentTarget.id;
+
+        default:
+          return null;
+      }
+    });
   };
+
+  useEffect(() => {
+    window.addEventListener('keydown', e => {
+      if (e.key === 'Escape') setPopUpOpen(null);
+    });
+
+    return () => {
+      window.removeEventListener('keydown', e => {
+        if (e.key === 'Escape') setPopUpOpen(null);
+      });
+    };
+  }, []);
 
   return (
     <HeaderBox>
-      <IconButton id="bellButton" icon={BellIcon} iconSize={24} />
-      <UserAvatar src={user.img} onClick={handleProfileToggle} />
-      {profileOpen && <Profile user={user} />}
+      <NotificationBtnBox>
+        <IconButton
+          id="bellButton"
+          icon={BellIcon}
+          iconSize={24}
+          onClick={handlePopupToggle}
+        />
+        {notifications.length > 0 && <Badge number={notifications.length} />}
+      </NotificationBtnBox>
+      <UserAvatar id="profileOpen" src={user.img} onClick={handlePopupToggle} />
+
+      <Popup isOpen={popUpOpen === 'bellButton'}>
+        <Notifications />
+      </Popup>
+
+      <Popup isOpen={popUpOpen === 'profileOpen'}>
+        <Profile user={user} />
+      </Popup>
     </HeaderBox>
   );
 };

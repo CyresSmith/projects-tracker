@@ -13,6 +13,7 @@ export const ButtonBox = styled.button`
 
   svg {
     margin-right: ${theme.space[2]};
+    transition: ${theme.transition.primary};
   }
 
   :disabled {
@@ -31,4 +32,5 @@ export const Text = styled.span`
   font-family: ${theme.fonts.body};
   font-size: ${theme.fontSizes.s};
   font-weight: ${theme.fontWeights.regular};
+  transition: ${theme.transition.primary};
 `;

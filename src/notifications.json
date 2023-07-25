@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "text": "A call is scheduled for 10:00 a.m. tomorrow, 05/20/23",
+    "status": "planned",
+    "date": "2023-07-25"
+  },
+  {
+    "id": "2",
+    "text": "Stage “User Flows” started",
+    "status": "started",
+    "date": "2023-07-21"
+  },
+  {
+    "id": "3",
+    "text": "Stage “UX researches” completed",
+    "status": "completed",
+    "date": "2023-07-21"
+  },
+  {
+    "id": "4",
+    "text": "Stage “Strategy session” completed",
+    "status": "completed",
+    "date": "2023-07-18"
+  }
+]

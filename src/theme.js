@@ -24,7 +24,7 @@ const theme = {
     },
     danger: '#D21312',
     success: '#14AE5C',
-    warning: 'FF6000',
+    warning: '#FF6000',
   },
 
   fonts: {

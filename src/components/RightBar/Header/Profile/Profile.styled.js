@@ -2,15 +2,7 @@ import styled from '@emotion/styled';
 import theme from 'theme';
 
 export const ProfileBox = styled.div`
-  position: absolute;
-  width: 396px;
-  top: calc(100% + ${theme.space[3]});
-  right: 0;
-  padding: ${theme.space[3]};
-  background-color: ${theme.colors.white};
-  border-radius: ${theme.radii.l};
-  box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.08);
-  z-index: 2;
+  width: 330px;
 
   p {
     display: flex;
@@ -58,12 +50,15 @@ export const ButtonsBox = styled.div`
       font-size: ${theme.fontSizes.l};
     }
 
-    :hover {
-      color: ${theme.colors.primary.regular};
+    :hover:not(:disabled) {
       background-color: ${theme.colors.primary.bg};
 
       span {
-        font-size: ${theme.fontSizes.l};
+        color: ${theme.colors.primary.regular};
+      }
+
+      svg {
+        fill: ${theme.colors.primary.regular};
       }
     }
   }

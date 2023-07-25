@@ -1,4 +1,6 @@
-import Button from 'components/shared/button';
+import { RiSettings4Fill } from 'react-icons/ri';
+import { IoLogOut } from 'react-icons/io5';
+
 import {
   ProfileBox,
   UserImg,
@@ -8,9 +10,8 @@ import {
   ButtonsBox,
 } from './Profile.styled';
 
-import { RiSettings4Fill } from 'react-icons/ri';
-import { IoLogOut } from 'react-icons/io5';
-import TextButton from 'components/shared/button/TextButton/TextButton';
+import TextButton from 'components/shared/button/TextButton';
+
 import theme from 'theme';
 
 const textButtons = [

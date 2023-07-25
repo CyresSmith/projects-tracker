@@ -12,8 +12,8 @@ const TextButton = ({
 }) => {
   return (
     <ButtonBox id={id} color={color} onClick={onClick}>
-      <Icon size={iconSize} color="inherit" />
-      <Text color="inherit">{children}</Text>
+      <Icon size={iconSize} color={color} />
+      <Text color={color}>{children}</Text>
     </ButtonBox>
   );
 };
