@@ -14,12 +14,12 @@ import TextButton from 'components/shared/button/TextButton';
 
 import theme from 'theme';
 
-const textButtons = [
-  { text: 'Settings', icon: RiSettings4Fill, id: null },
-  { text: 'Logout', icon: IoLogOut, id: 'logout' },
-];
+const Profile = ({ user, setShowModal, setPopUpShow }) => {
+  const handleSettingsClick = () => {
+    setPopUpShow(null);
+    setShowModal(true);
+  };
 
-const Profile = ({ user }) => {
   return (
     <ProfileBox>
       <User>
@@ -30,17 +30,23 @@ const Profile = ({ user }) => {
         </p>
       </User>
       <ButtonsBox>
-        {textButtons.map(btn => (
-          <TextButton
-            key={btn.text}
-            iconSize={20}
-            icon={btn.icon}
-            color={theme.colors.black}
-            id={btn.id}
-          >
-            {btn.text}
-          </TextButton>
-        ))}
+        <TextButton
+          iconSize={20}
+          icon={RiSettings4Fill}
+          color={theme.colors.black}
+          onClick={handleSettingsClick}
+        >
+          Settings
+        </TextButton>
+
+        <TextButton
+          iconSize={20}
+          icon={IoLogOut}
+          color={theme.colors.black}
+          id="logout"
+        >
+          Logout
+        </TextButton>
       </ButtonsBox>
     </ProfileBox>
   );

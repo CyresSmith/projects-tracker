@@ -9,9 +9,7 @@ import Textarea from './Textarea';
 import { Label, Error } from 'components/shared/Input/Input.styled';
 import PasswordInput from './PasswordInput/PasswordInput';
 
-const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$/;
-const phoneRegExp =
-  /^(\+?\d{1,3}\s?-?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{2}[\s.-]?\d{2}$/;
+import { passwordRegExp, phoneRegExp } from 'components/shared/RegExps';
 
 const services = [
   'UI/UX Design',
@@ -35,9 +33,9 @@ const ValidationSchema = Yup.object().shape({
   email: Yup.string().email('Must be valid email').required('Required'),
   password: Yup.string()
     .min(8, 'Must be at least 8 characters')
-    .max(20, 'Must be max 20 characters')
+    .max(16, 'Must be max 16 characters')
     .matches(
-      passwordRegex,
+      passwordRegExp,
       'Must be at least one capital letter and one number'
     )
     .required('Required'),

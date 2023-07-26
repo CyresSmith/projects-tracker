@@ -12,7 +12,6 @@ export const BadgeBox = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: ${theme.radii.round};
-  z-index: 1;
   box-shadow: ${theme.shadow.primary};
 `;
 
