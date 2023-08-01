@@ -1,0 +1,310 @@
+[
+  {
+    "id": 1,
+    "name": "Strategy session",
+    "desc": "Lorem ipsum dolor sit amet consectetur. Consequat augue cum leo mus. Quis duis molestie gravida rutrum a nulla. Elementum fames consectetur elementum ultricies eleifend. Urna tempor aliquam eu id. Maecenas consequat suspendisse ultrices mus senectus. Tempus nullam dolor enim pellentesque volutpat sed ornare massa egestas.",
+    "dateStart": "2023-07-12",
+    "deadline": "2023-07-18",
+    "duration": 8,
+    "progress": 100,
+    "isActive": false,
+    "contact": {
+      "name": "Wadew Warren",
+      "img": "https://www.adobe.com/content/dam/cc/us/en/creativecloud/photography/discover/portrait-photography/CODERED_B1_portrait_photography-P4a_438x447.jpg.img.jpg"
+    }
+  },
+  {
+    "id": 2,
+    "name": "UX researches",
+    "desc": "Lorem ipsum dolor sit amet consectetur. Consequat augue cum leo mus. Quis duis molestie gravida rutrum a nulla. Elementum fames consectetur elementum ultricies eleifend. Urna tempor aliquam eu id. Maecenas consequat suspendisse ultrices mus senectus. Tempus nullam dolor enim pellentesque volutpat sed ornare massa egestas.",
+    "dateStart": "2023-07-18",
+    "deadline": "2023-07-21",
+    "duration": 6,
+    "progress": 100,
+    "isActive": false,
+    "contact": {
+      "name": "Wadew Warren",
+      "img": "https://www.adobe.com/content/dam/cc/us/en/creativecloud/photography/discover/portrait-photography/CODERED_B1_portrait_photography-P4a_438x447.jpg.img.jpg"
+    }
+  },
+  {
+    "id": 3,
+    "name": "User Flows",
+    "desc": "Lorem ipsum dolor sit amet consectetur. Consequat augue cum leo mus. Quis duis molestie gravida rutrum a nulla. Elementum fames consectetur elementum ultricies eleifend. Urna tempor aliquam eu id. Maecenas consequat suspendisse ultrices mus senectus. Tempus nullam dolor enim pellentesque volutpat sed ornare massa egestas.",
+    "dateStart": "2023-07-21",
+    "deadline": "2023-07-27",
+    "duration": 4,
+    "progress": 32,
+    "isActive": true,
+    "contact": {
+      "name": "Wadew Warren",
+      "img": "https://www.adobe.com/content/dam/cc/us/en/creativecloud/photography/discover/portrait-photography/CODERED_B1_portrait_photography-P4a_438x447.jpg.img.jpg"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Wireframing",
+    "desc": "Lorem ipsum dolor sit amet consectetur. Consequat augue cum leo mus. Quis duis molestie gravida rutrum a nulla. Elementum fames consectetur elementum ultricies eleifend. Urna tempor aliquam eu id. Maecenas consequat suspendisse ultrices mus senectus. Tempus nullam dolor enim pellentesque volutpat sed ornare massa egestas.",
+    "dateStart": "2023-07-27",
+    "deadline": "2023-07-31",
+    "duration": 4,
+    "progress": 0,
+    "isActive": false,
+    "contact": {
+      "name": "Wadew Warren",
+      "img": "https://www.adobe.com/content/dam/cc/us/en/creativecloud/photography/discover/portrait-photography/CODERED_B1_portrait_photography-P4a_438x447.jpg.img.jpg"
+    },
+    "chat": {
+      "messages": [
+        {
+          "id": 1,
+          "text": "Lorem ipsum dolor sit amet consectetur. Tellus ultricies massa quisque mus turpis amet aliquet. Pharetra molestie non sed quam diam amet pretium proin at?",
+          "date": "2023-07-18T13:28:51.435Z",
+          "author": {
+            "id": 1,
+            "name": "Wadew Warren",
+            "img": "https://apprendre-la-photographie.net/wp-content/uploads/2016/10/portrait-photo-bokeh-arriere-plan-flou-Christoph-Gellert.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "text": "Tellus ultricies massa quisque mus turpis amet aliquet.",
+          "date": "2023-07-18T12:36:51.435Z",
+          "author": {
+            "id": 2,
+            "name": "Alexa A",
+            "img": "https://www.adobe.com/content/dam/cc/us/en/creativecloud/photography/discover/portrait-photography/CODERED_B1_portrait_photography-P4a_438x447.jpg.img.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "text": "Nunc cras id aliquam vulputate odio sit maecenas.",
+          "date": "2023-07-19T11:15:51.435Z",
+          "author": {
+            "id": 1,
+            "name": "Wadew Warren",
+            "img": "https://apprendre-la-photographie.net/wp-content/uploads/2016/10/portrait-photo-bokeh-arriere-plan-flou-Christoph-Gellert.jpg"
+          }
+        },
+        {
+          "id": 4,
+          "text": "Tellus ultricies massa quisque mus turpis amet aliquet.",
+          "date": "2023-07-19T11:17:51.435Z",
+          "author": {
+            "id": 2,
+            "name": "Alexa A",
+            "img": "https://www.adobe.com/content/dam/cc/us/en/creativecloud/photography/discover/portrait-photography/CODERED_B1_portrait_photography-P4a_438x447.jpg.img.jpg"
+          }
+        },
+        {
+          "id": 5,
+          "text": "Lorem ipsum dolor sit amet consectetur.",
+          "date": "2023-07-19T11:18:51.435Z",
+          "author": {
+            "id": 3,
+            "name": "Ottokar Elmar",
+            "img": "https://imgv3.fotor.com/images/gallery/ai-generated-a-real-man-wearing-a-cap-by-Fotor-ai-art-generator.jpg"
+          }
+        },
+        {
+          "id": 6,
+          "text": "Lorem ipsum dolor sit amet consectetur.",
+          "date": "2023-07-19T11:21:51.435Z",
+          "author": {
+            "id": 3,
+            "name": "Ottokar Elmar",
+            "img": "https://imgv3.fotor.com/images/gallery/ai-generated-a-real-man-wearing-a-cap-by-Fotor-ai-art-generator.jpg"
+          }
+        },
+        {
+          "id": 7,
+          "text": "Tellus ultricies massa quisque mus turpis amet aliquet.",
+          "date": "2023-07-19T11:23:51.435Z",
+          "author": {
+            "id": 2,
+            "name": "Alexa A",
+            "img": "https://www.adobe.com/content/dam/cc/us/en/creativecloud/photography/discover/portrait-photography/CODERED_B1_portrait_photography-P4a_438x447.jpg.img.jpg"
+          }
+        }
+      ]
+    },
+    "links": [
+      {
+        "name": "Working links",
+        "linksArr": [
+          {
+            "name": "Figma file",
+            "link": "https://www.figma.com/file/ixzT5tbO48DMqTjVlESTVl/Onboarding?node-id=97%3A1026&mode=dev"
+          },
+          {
+            "name": "Google doc",
+            "link": "https://www.google.com/intl/uk_ua/docs/about/"
+          }
+        ]
+      },
+      {
+        "name": "Other links",
+        "linksArr": [
+          {
+            "name": "Google doc",
+            "link": "https://www.google.com/intl/uk_ua/docs/about/"
+          },
+          {
+            "name": "Figma file",
+            "link": "https://www.figma.com/file/ixzT5tbO48DMqTjVlESTVl/Onboarding?node-id=97%3A1026&mode=dev"
+          }
+        ]
+      }
+    ],
+    "files": [
+      {
+        "name": "Google doc",
+        "link": "https://docs.google.com/document/d/1ECo7_YHne8w7nV5m2f2lBR53xKUoCmHJR8WyuX0I7D4/edit?usp=sharing"
+      },
+      {
+        "name": "Google pdf",
+        "link": "https://drive.google.com/file/d/1HhXElAN8RyZDRvDD1J4Z0H14eUQ12r3l/view?usp=sharing"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Testing",
+    "desc": "Lorem ipsum dolor sit amet consectetur. Consequat augue cum leo mus. Quis duis molestie gravida rutrum a nulla. Elementum fames consectetur elementum ultricies eleifend. Urna tempor aliquam eu id. Maecenas consequat suspendisse ultrices mus senectus. Tempus nullam dolor enim pellentesque volutpat sed ornare massa egestas.",
+    "dateStart": "2023-07-31",
+    "deadline": "2023-08-02",
+    "duration": 4,
+    "progress": 32,
+    "isActive": true,
+    "contact": {
+      "name": "Wadew Warren",
+      "img": "https://www.adobe.com/content/dam/cc/us/en/creativecloud/photography/discover/portrait-photography/CODERED_B1_portrait_photography-P4a_438x447.jpg.img.jpg"
+    },
+    "chat": {
+      "messages": [
+        {
+          "id": 1,
+          "text": "Lorem ipsum dolor sit amet consectetur. Tellus ultricies massa quisque mus turpis amet aliquet. Pharetra molestie non sed quam diam amet pretium proin at?",
+          "date": "2023-07-18T13:28:51.435Z",
+          "author": {
+            "id": 1,
+            "name": "Wadew Warren",
+            "img": "https://apprendre-la-photographie.net/wp-content/uploads/2016/10/portrait-photo-bokeh-arriere-plan-flou-Christoph-Gellert.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "text": "Tellus ultricies massa quisque mus turpis amet aliquet.",
+          "date": "2023-07-18T12:36:51.435Z",
+          "author": {
+            "id": 2,
+            "name": "Alexa A",
+            "img": "https://www.adobe.com/content/dam/cc/us/en/creativecloud/photography/discover/portrait-photography/CODERED_B1_portrait_photography-P4a_438x447.jpg.img.jpg"
+          }
+        },
+        {
+          "id": 3,
+          "text": "Nunc cras id aliquam vulputate odio sit maecenas.",
+          "date": "2023-07-19T11:15:51.435Z",
+          "author": {
+            "id": 1,
+            "name": "Wadew Warren",
+            "img": "https://apprendre-la-photographie.net/wp-content/uploads/2016/10/portrait-photo-bokeh-arriere-plan-flou-Christoph-Gellert.jpg"
+          }
+        },
+        {
+          "id": 4,
+          "text": "Tellus ultricies massa quisque mus turpis amet aliquet.",
+          "date": "2023-07-19T11:17:51.435Z",
+          "author": {
+            "id": 2,
+            "name": "Alexa A",
+            "img": "https://www.adobe.com/content/dam/cc/us/en/creativecloud/photography/discover/portrait-photography/CODERED_B1_portrait_photography-P4a_438x447.jpg.img.jpg"
+          }
+        },
+        {
+          "id": 5,
+          "text": "Lorem ipsum dolor sit amet consectetur.",
+          "date": "2023-07-19T11:18:51.435Z",
+          "author": {
+            "id": 3,
+            "name": "Ottokar Elmar",
+            "img": "https://imgv3.fotor.com/images/gallery/ai-generated-a-real-man-wearing-a-cap-by-Fotor-ai-art-generator.jpg"
+          }
+        },
+        {
+          "id": 6,
+          "text": "Lorem ipsum dolor sit amet consectetur.",
+          "date": "2023-07-19T11:21:51.435Z",
+          "author": {
+            "id": 3,
+            "name": "Ottokar Elmar",
+            "img": "https://imgv3.fotor.com/images/gallery/ai-generated-a-real-man-wearing-a-cap-by-Fotor-ai-art-generator.jpg"
+          }
+        },
+        {
+          "id": 7,
+          "text": "Tellus ultricies massa quisque mus turpis amet aliquet.",
+          "date": "2023-07-19T11:23:51.435Z",
+          "author": {
+            "id": 2,
+            "name": "Alexa A",
+            "img": "https://www.adobe.com/content/dam/cc/us/en/creativecloud/photography/discover/portrait-photography/CODERED_B1_portrait_photography-P4a_438x447.jpg.img.jpg"
+          }
+        }
+      ]
+    },
+    "links": [
+      {
+        "name": "Working links",
+        "linksArr": [
+          {
+            "name": "Figma file",
+            "link": "https://www.figma.com/file/ixzT5tbO48DMqTjVlESTVl/Onboarding?node-id=97%3A1026&mode=dev"
+          },
+          {
+            "name": "Google doc",
+            "link": "https://www.google.com/intl/uk_ua/docs/about/"
+          }
+        ]
+      },
+      {
+        "name": "Other links",
+        "linksArr": [
+          {
+            "name": "Google doc",
+            "link": "https://www.google.com/intl/uk_ua/docs/about/"
+          },
+          {
+            "name": "Figma file",
+            "link": "https://www.figma.com/file/ixzT5tbO48DMqTjVlESTVl/Onboarding?node-id=97%3A1026&mode=dev"
+          }
+        ]
+      }
+    ],
+    "files": [
+      {
+        "name": "Google doc",
+        "link": "https://docs.google.com/document/d/1ECo7_YHne8w7nV5m2f2lBR53xKUoCmHJR8WyuX0I7D4/edit?usp=sharing"
+      },
+      {
+        "name": "Google pdf",
+        "link": "https://drive.google.com/file/d/1HhXElAN8RyZDRvDD1J4Z0H14eUQ12r3l/view?usp=sharing"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Moodboard",
+    "desc": "Lorem ipsum dolor sit amet consectetur. Consequat augue cum leo mus. Quis duis molestie gravida rutrum a nulla. Elementum fames consectetur elementum ultricies eleifend. Urna tempor aliquam eu id. Maecenas consequat suspendisse ultrices mus senectus. Tempus nullam dolor enim pellentesque volutpat sed ornare massa egestas.",
+    "dateStart": "2023-08-02",
+    "deadline": "2023-08-04",
+    "duration": 4,
+    "progress": 0,
+    "isActive": false,
+    "contact": {
+      "name": "Wadew Warren",
+      "img": "https://www.adobe.com/content/dam/cc/us/en/creativecloud/photography/discover/portrait-photography/CODERED_B1_portrait_photography-P4a_438x447.jpg.img.jpg"
+    }
+  }
+]

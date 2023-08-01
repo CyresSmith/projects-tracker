@@ -6,6 +6,7 @@ const SharedLayout = lazy(() => import('pages/SharedLayout'));
 const Login = lazy(() => import('pages/Login'));
 const Register = lazy(() => import('pages/Register'));
 const Dashboard = lazy(() => import('pages/Dashboard'));
+const Chat = lazy(() => import('components/Chat'));
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Dashboard />} />
+          <Route path="/chat" element={<Chat />} />
         </Route>
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
