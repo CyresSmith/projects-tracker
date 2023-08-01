@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import theme from 'theme';
 
 export const MessageBox = styled.li`
-  width: 400px;
+  max-width: 400px;
   padding: ${theme.space[2]};
   margin-left: ${p => (p.currentUser ? 'auto' : '0')};
   display: flex;
@@ -38,6 +38,7 @@ export const AuthorName = styled.p`
 export const Text = styled.p`
   font-size: ${theme.fontSizes.xs};
   font-weight: ${theme.fontWeights.light};
+  word-wrap: break-word;
 `;
 
 export const MessageDate = styled.p`

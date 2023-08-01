@@ -7,12 +7,14 @@ const Button = ({
   onClick,
   children,
   white = false,
+  light = false
 }) => {
   return (
     <Btn
       id={id}
       disabled={disabled}
       white={white}
+      light={light}
       type={type}
       onClick={onClick}
     >

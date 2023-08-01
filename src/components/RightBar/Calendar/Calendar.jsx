@@ -8,14 +8,15 @@ import '../../Register/FormSection/SecondStepForm/Dates/DatePicker/styles.css';
 import { CalendarBox } from './Calendar.styled';
 import './calendarStyles.css';
 
-const Calendar = ({ events = [] }) => {
+const Calendar = ({ events = [], setDate = null, afterToday = false }) => {
   const [day, setDay] = useState(null);
   const [eventsDates, setEventsDates] = useState([]);
 
-  const selectHandle = value => {
-    const date = format(value, 'dd.MM.yy');
-    setDay(date);
-  };
+  useEffect(() => {
+    if (!setDate) return;
+
+    setDate(day);
+  }, [day, setDate]);
 
   useEffect(() => {
     if (events.length === 0) return;
@@ -30,7 +31,7 @@ const Calendar = ({ events = [] }) => {
       <DayPicker
         mode="multiple"
         selected={eventsDates}
-        // onSelect={selectHandle}
+        onSelect={setDay}
         fixedWeeks
         showOutsideDays
         ISOWeek

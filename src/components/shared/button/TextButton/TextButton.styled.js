@@ -24,6 +24,10 @@ export const ButtonBox = styled.button`
     svg {
       color: ${theme.colors.primary.hover};
     }
+
+    span {
+      color: ${theme.colors.primary.regular};
+    }
   }
 `;
 
@@ -33,4 +37,5 @@ export const Text = styled.span`
   font-size: ${theme.fontSizes.s};
   font-weight: ${theme.fontWeights.regular};
   transition: ${theme.transition.primary};
+
 `;

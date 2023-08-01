@@ -3,8 +3,8 @@ import theme from 'theme';
 
 export const CalendarBox = styled.div`
   height: 360px;
-  margin-top: ${theme.space[4]};
-  margin-bottom: ${theme.space[3]};
+  /* margin-top: ${theme.space[4]};
+  margin-bottom: ${theme.space[3]}; */
   transition: ${theme.transition.primary};
 
   div.rdp {

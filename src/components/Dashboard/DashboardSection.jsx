@@ -3,8 +3,10 @@ import Board from './Board';
 import Timeline from './Timeline/Timeline';
 
 import stages from 'stages.json';
+
 import SectionInfo from 'components/SectionInfo';
 import ViewToggle from './ViewToggle';
+
 import { SectionBox } from 'components/shared/SectionBox.styled';
 
 const DashboardSection = () => {

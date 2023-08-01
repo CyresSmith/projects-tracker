@@ -5,7 +5,7 @@ export const SectionInfoBox = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: ${theme.space[4]};
+  margin-bottom: ${theme.space[3]};
 `;
 
 export const SectionName = styled.h3`

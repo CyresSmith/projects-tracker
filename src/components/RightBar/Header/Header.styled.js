@@ -8,6 +8,7 @@ export const HeaderBox = styled.div`
   justify-content: flex-end;
   gap: ${theme.space[3]};
   position: relative;
+  margin-bottom: ${theme.space[4]};
 
   button[id='bellButton'] {
     width: 52px;
