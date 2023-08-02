@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import parse from 'date-fns/parse';
 
 import { FormBox } from './SecondStepForm.styled';
 import Button from 'components/shared/button';
@@ -12,8 +11,6 @@ import Dates from './Dates';
 
 const URL = /^(http[s]?:\/\/)?[^\s(["<,>]*\.[^\s[",><]*$/i;
 
-const today = new Date();
-
 const initialValues = {
   files: [],
   links: [''],
@@ -23,8 +20,6 @@ const initialValues = {
 };
 
 const SecondStepForm = ({ firstStepData }) => {
-  const [startDate, setStartDate] = useState(today);
-
   const handleSubmit = data => {
     console.log({ ...data, ...firstStepData });
   };
@@ -36,6 +31,11 @@ const SecondStepForm = ({ firstStepData }) => {
     });
   }, []);
 
+  const parseDateString = (value, originalValue) => {
+    const [day, month, year] = originalValue.split('.');
+    return new Date(`${year}-${month}-${day}`);
+  };
+
   const ValidationSchema = Yup.object().shape({
     files: Yup.array().max(10),
     links: Yup.array()
@@ -43,29 +43,13 @@ const SecondStepForm = ({ firstStepData }) => {
       .max(10, 'Max 10 links'),
     budget: Yup.number().min(200).max(5000).required('Required'),
     dateStart: Yup.date()
-      .transform(function (value, originalValue) {
-        if (this.isType(value)) {
-          return value;
-        }
-        const result = parse(originalValue, 'dd.MM.yy', new Date());
-        setStartDate(result);
-        return result;
-      })
-      .typeError('Enter a valid date')
-      .required('Required')
-      .min(today, 'Date is too early'),
-
+      .required('Start date is required')
+      .min(new Date(), 'Cannot be earlier than today')
+      .transform(parseDateString),
     deadline: Yup.date()
-      .transform(function (value, originalValue) {
-        if (this.isType(value)) {
-          return value;
-        }
-        const result = parse(originalValue, 'dd.MM.yy', new Date());
-        return result;
-      })
-      .typeError('Enter a valid date')
-      .required('Required')
-      .min(startDate, 'Date is too early'),
+      .required('Deadline is required')
+      .min(Yup.ref('dateStart'), 'Cannot be earlier than start date')
+      .transform(parseDateString),
   });
 
   return (

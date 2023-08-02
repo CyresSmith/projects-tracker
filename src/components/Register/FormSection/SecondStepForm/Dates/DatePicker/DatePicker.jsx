@@ -22,7 +22,7 @@ const DatePicker = ({ field, setFieldValue, togglePicker }) => {
   };
 
   const selectHandle = value => {
-    const date = format(value, 'dd.MM.yy');
+    const date = format(value, 'dd.MM.yyyy');
     setDay(date);
     setFieldValue(field, date);
     togglePicker();

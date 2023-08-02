@@ -44,7 +44,7 @@ const Dates = ({ setFieldValue, values }) => {
           type="text"
           placeholder="Deadline"
           id="deadline"
-          value={new Date(values.dateStart).toLocaleDateString()}
+          value={values.deadline}
         />
 
         <IconButton
