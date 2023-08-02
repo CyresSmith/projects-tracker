@@ -1,0 +1,1 @@
+const o="Alexa A",a="+380986562655",t="alexa.amber@gmail.com",e="https://www.adobe.com/content/dam/cc/us/en/creativecloud/photography/discover/portrait-photography/CODERED_B1_portrait_photography-P4a_438x447.jpg.img.jpg",c={id:2,name:o,phone:a,email:t,img:e};export{c as u};
