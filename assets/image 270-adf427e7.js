@@ -1,4 +1,4 @@
-import{t as o,j as e}from"./index-85b482a1.js";import{n as r}from"./emotion-styled.browser.esm-c6f8bd0e.js";const g=r.div`
+import{t as o,j as e}from"./index-35cc4ac2.js";import{n as r}from"./emotion-styled.browser.esm-c7072f6a.js";const g=r.div`
   padding: ${t=>t.small===!0?"10px 30px":"16px 50px"};
   display: flex;
   align-items: center;
